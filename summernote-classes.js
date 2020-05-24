@@ -1,3 +1,4 @@
+/*! summernote-classes v0.1 + includes Bootstrap 4 sample classes */
 (function (factory) {
   if (typeof define === 'function' && define.amd) {
     define(['jquery'], factory);

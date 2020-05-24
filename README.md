@@ -1,7 +1,9 @@
-# summernote-classes
+# summernote-classes v0.1
 A plugin for the [Summernote](https://github.com/summernote/summernote/) WYSIWYG editor.
 
-summernote-classes adds functionality that indicates the current clicked on element inside the editing area, if classes for language and options are set, the classes will displayed next to the selected element which are clickable to toggle that class for the selected element with indication if the element contains the class or not.
+summernote-classes adds functionality that indicates the current clicked on element inside the editing area, if classes for language and options are set, the classes will displayed next to the selected element which are clickable to toggle that class for the selected element with indication if the element contains the class or not. Classes not outlined in the plugin lang, or options will simply be displayed as the Element Node Type without the class options.
+
+Included are some sample classes from Bootstrap 4, feel free to add, edit or remove.
 
 ![summernote-classes](summernote-classes.gif)
 
