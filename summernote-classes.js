@@ -19,7 +19,7 @@
     }
   });
   $.extend($.summernote.options, {
-    disableTableNesting: true,
+    disableTableNesting: false,
     classes: {
       a: [ 'btn' , 'btn-link', 'btn-primary', 'btn-secondary', 'btn-danger'],
       img: [ 'img-fluid', 'float-left', 'float-center', 'float-right', 'rounded', 'rounded-circle', 'shadow-sm', 'shadow' ,'shadow-lg' ,'img-thumbnail'],
