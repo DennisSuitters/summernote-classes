@@ -1,4 +1,4 @@
-/*! summernote-classes v0.1 + includes Bootstrap 4 sample classes */
+/*! summernote-classes v0.2 + includes Bootstrap 4 sample classes */
 (function (factory) {
   if (typeof define === 'function' && define.amd) {
     define(['jquery'], factory);
@@ -19,6 +19,7 @@
     }
   });
   $.extend($.summernote.options, {
+    disableTableNesting: true,
     classes: {
       a: [ 'btn' , 'btn-link', 'btn-primary', 'btn-secondary', 'btn-danger'],
       img: [ 'img-fluid', 'float-left', 'float-center', 'float-right', 'rounded', 'rounded-circle', 'shadow-sm', 'shadow' ,'shadow-lg' ,'img-thumbnail'],
@@ -41,7 +42,15 @@
           var el = e.target;
           var elem = $(":focus");
           var outputText='';
-          if(!el.classList.contains('note-editable')) {
+          if (options.disableTableNesting === true) {
+            $('.note-toolbar [aria-label="Table"]').prop('disabled', false);
+          }
+          if (!el.classList.contains('note-editable')) {
+            if (options.disableTableNesting === true) {
+              if (el.nodeName == 'TD') {
+                $('.note-toolbar [aria-label="Table"]').prop('disabled', true);
+              }
+            }
             outputText += el.nodeName;
             var nN=el.nodeName.toLowerCase();
             if(nN in options.classes) {
